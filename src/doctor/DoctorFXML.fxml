@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.controls.cells.editors.base.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="307.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctor.DoctorFXMLController">
+   <children>
+      <JFXListView fx:id="list" layoutX="324.0" layoutY="14.0" onMouseClicked="#selectSpecificClient" prefHeight="279.0" prefWidth="215.0" />
+      <VBox fx:id="vboxSpecifics" alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefHeight="279.0" prefWidth="300.0" spacing="20.0">
+         <children>
+            <Label fx:id="patientName" text="Name" />
+            <TableView fx:id="table" maxWidth="-Infinity" prefHeight="211.0" prefWidth="282.0">
+              <columns>
+                <TableColumn fx:id="heartRateCol" editable="false" prefWidth="94.0" sortable="false" text="Heart Rate" />
+                <TableColumn fx:id="pressureCol" editable="false" prefWidth="94.0" sortable="false" text="Pressure" />
+                  <TableColumn fx:id="movementCol" editable="false" prefWidth="94.0" sortable="false" text="Movement" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
